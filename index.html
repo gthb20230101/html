@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学网页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="在网页中搜索...">
+            </div>
+            <ul class="menu">
+                <li class="menu-item has-submenu">章节一
+                    <ul class="sub-menu">
+                        <li class="menu-item child" data-content="content1">小节1</li>
+                        <li class="menu-item child" data-content="content2">小节2</li>
+                    </ul>
+                </li>
+                <li class="menu-item">章节二</li>
+                <li class="menu-item">章节三</li>
+                <!-- 添加更多目录项 -->
+            </ul>
+        </div>
+        <div class="content">
+            <div id="defaultContent">
+                <h1>Welcome to 教学网页</h1>
+                <p>这是一个教育型网页，你可以在左侧选择不同的章节来查看内容。</p>
+            </div>
+            <div id="content1" style="display: none;">
+                <h1>小节1</h1>
+                <p>This is the content of section 1. You can add text and images here.</p>
+                <img src="path/to/your/image1.jpg" alt="Image for Section 1">
+                <p>一行白鹭上青天</p>
+            </div>
+            <div id="content2" style="display: none;">
+                <h1>小节2</h1>
+                <p>This is the content of section 2. You can add text and images here.</p>
+                <img src="path/to/your/image2.jpg" alt="Image for Section 2">
+                <p>故人西辞黄鹤楼</p>
+            </div>
+            <!-- 添加更多内容区域 -->
+            <div class="search-results-container" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background-color: #f4f7f9;
+}
+
+.menu, .menu-item, .sub-menu .menu-item.child, .content {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: Consolas, monospace;
+}
+
+.search-box {
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    font-family: Consolas, monospace;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    background-color: #555;
+    color: white;
+}
+ /* 添加搜索结果的样式 */
+ .search-results-container {
+    padding: 20px;
+    background-color: #f4f7f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.search-result-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.search-result-item:hover {
+    background-color: #f0f3f5;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.0s;
+}
+.menu .menu-item {
+    margin: 15px 5px; /* 调整章节和小节之间的间距 */
+    /* ... 其他样式 ... */
+}
+
+.sub-menu .menu-item.child {
+    margin-bottom: 5px; /* 调整小节之间的间距 */
+    /* ... 其他样式 ... */
+}
+/* 悬停样式 */
+.menu-item:hover {
+    background-color: #3c94ff;
+}
+
+/* 有子菜单的悬停样式 */
+.menu-item.has-submenu.active:hover {
+    background-color: initial; /* 或者根据需要设置子菜单项的背景颜色 */
+}
+/* 子菜单项展开时显示 */
+.menu-item.has-submenu.active .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* 为子菜单项设置悬停样式 */
+.sub-menu .menu-item.child:hover {
+    background-color: #41cacd;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3498db;
+}
+
+p {
+    color: #555;
+}
+
+.active .sub-menu {
+    display: block;
+}
